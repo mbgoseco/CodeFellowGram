@@ -11,6 +11,5 @@ namespace CodeFellowGram.Models
         public string Author { get; set; }
         public string ImageURL { get; set; }
         public string Caption { get; set; }
-        public ICollection<string> Comments { get; set; }
     }
 }

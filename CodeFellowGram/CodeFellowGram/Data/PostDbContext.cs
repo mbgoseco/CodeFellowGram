@@ -53,8 +53,30 @@ namespace CodeFellowGram.Data
                     Caption = "We can't stop here. This is bat country!"
                 }
             );
+
+            modelBuilder.Entity<Comment>().HasData(
+                new Comment
+                {
+                    PostID = 1,
+                    User = "Mike F",
+                    UserComment = "Beat me to it!"
+                },
+                new Comment
+                {
+                    PostID = 3,
+                    User = "Mike G",
+                    UserComment = "Damn right!"
+                },
+                new Comment
+                {
+                    PostID = 1,
+                    User = "Joe",
+                    UserComment = "Second!"
+                }
+            );
         }
 
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Comment> Comments { get; set; }
     }
 }

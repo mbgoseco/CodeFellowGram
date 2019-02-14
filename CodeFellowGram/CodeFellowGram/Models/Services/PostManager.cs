@@ -26,6 +26,11 @@ namespace CodeFellowGram.Models.Services
         {
             Post post = await _context.Posts.FirstOrDefaultAsync(p => p.ID == id);
 
+            if (post != null)
+            {
+                post.Comments = await _context.Comments.Where(c => c.PostID == post.ID).ToListAsync();
+            }
+
             return post;
         }
 
@@ -56,6 +61,11 @@ namespace CodeFellowGram.Models.Services
             await _context.SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Finds a selected Post in the database and removes it if found.
+        /// </summary>
+        /// <param name="id">Primary Key value</param>
+        /// <returns>View of posts minus the deleted one</returns>
         public async Task DeleteAsync(int id)
         {
             Post post = await _context.Posts.FirstOrDefaultAsync(p => p.ID == id);
@@ -63,6 +73,13 @@ namespace CodeFellowGram.Models.Services
             if (post != null)
             {
                 _context.Posts.Remove(post);
+
+                List<Comment> comments = await _context.Comments.Where(c => c.PostID == post.ID).ToListAsync();
+                foreach (Comment item in comments)
+                {
+                    _context.Comments.Remove(item);
+                }
+
                 await _context.SaveChangesAsync();
             }
         }

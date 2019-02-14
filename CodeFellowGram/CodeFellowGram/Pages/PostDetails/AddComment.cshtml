@@ -3,6 +3,13 @@
 @{
     ViewData["Title"] = "AddComment";
 }
+<div id="comment-box">
+    <form method="post">
+        <label asp-for="Comment.User"></label>
+        <input asp-for="Comment.User" />
 
-<h1>AddComment</h1>
-
+        <label asp-for="Comment.UserComment">Comment</label>
+        <textarea rows="5" asp-for="Comment.UserComment"></textarea>
+        <button type="submit">POST COMMENT</button>
+    </form>
+</div>

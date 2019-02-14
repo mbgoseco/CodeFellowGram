@@ -1,5 +1,6 @@
 ﻿using CodeFellowGram.Data;
 using CodeFellowGram.Models.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,15 @@ namespace CodeFellowGram.Models.Services
         public CommentManager(PostDbContext context)
         {
             _context = context;
+        }
+
+        /// <summary>
+        /// Returns a list of all comments in the Comment table.
+        /// </summary>
+        /// <returns>List of comments</returns>
+        public async Task<List<Comment>> GetComments()
+        {
+            return await _context.Comments.ToListAsync();
         }
 
         /// <summary>

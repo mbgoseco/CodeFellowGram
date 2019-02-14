@@ -4,5 +4,20 @@
     ViewData["Title"] = "Manage";
 }
 
-<h1>Manage</h1>
+<div id="edit-box">
+    <form method="post">
+        <input type="hidden" asp-for="Post.ID" />
 
+        <label asp-for="Post.Author"></label>
+        <input asp-for="Post.Author" />
+
+        <label asp-for="Post.ImageURL">Image URL</label>
+        <input asp-for="Post.ImageURL" />
+
+        <label asp-for="Post.Caption"></label>
+        <textarea rows="5" asp-for="Post.Caption"></textarea>
+
+        <button type="submit">SAVE</button>
+        <button type="submit" asp-page-handler="Delete">DELETE</button>
+    </form>
+</div>

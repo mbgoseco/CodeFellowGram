@@ -11,13 +11,7 @@ namespace CodeFellowGram.Pages.PostDetails
 {
     public class AddCommentModel : PageModel
     {
-        private readonly IPost _post;
         private readonly IComment _comment;
-
-        public AddCommentModel(IPost post)
-        {
-            _post = post;
-        }
 
         public AddCommentModel(IComment comment)
         {
@@ -26,7 +20,6 @@ namespace CodeFellowGram.Pages.PostDetails
 
         [FromRoute]
         public int ID { get; set; }
-        public Post Post { get; set; }
         [BindProperty]
         public Comment Comment { get; set; }
 

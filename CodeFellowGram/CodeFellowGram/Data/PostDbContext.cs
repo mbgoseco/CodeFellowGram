@@ -57,18 +57,21 @@ namespace CodeFellowGram.Data
             modelBuilder.Entity<Comment>().HasData(
                 new Comment
                 {
+                    ID = 1,
                     PostID = 1,
                     User = "Mike F",
                     UserComment = "Beat me to it!"
                 },
                 new Comment
                 {
+                    ID = 2,
                     PostID = 3,
                     User = "Mike G",
                     UserComment = "Damn right!"
                 },
                 new Comment
                 {
+                    ID = 3,
                     PostID = 1,
                     User = "Joe",
                     UserComment = "Second!"

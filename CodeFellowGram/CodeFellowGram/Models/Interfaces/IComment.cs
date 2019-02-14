@@ -7,6 +7,9 @@ namespace CodeFellowGram.Models.Interfaces
 {
     public interface IComment
     {
+        // Get All
+        Task<List<Comment>> GetComments();
+
         // Save
         Task SaveAsync(Comment comment);
     }

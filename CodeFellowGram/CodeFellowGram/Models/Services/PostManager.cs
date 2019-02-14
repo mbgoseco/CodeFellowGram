@@ -35,7 +35,7 @@ namespace CodeFellowGram.Models.Services
         }
 
         /// <summary>
-        /// Returns a list of all posts in the Post database.
+        /// Returns a list of all posts in the Post table.
         /// </summary>
         /// <returns>List of posts</returns>
         public async Task<List<Post>> GetPosts()

@@ -1,3 +1,7 @@
 ﻿body {
     background-color: sienna;
 }
+
+.commentAuthor {
+    font-weight: bold;
+}

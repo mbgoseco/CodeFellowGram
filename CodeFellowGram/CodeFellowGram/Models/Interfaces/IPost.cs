@@ -7,9 +7,6 @@ namespace CodeFellowGram.Models.Interfaces
 {
     public interface IPost
     {
-        // Delete
-        Task DeleteAsync(int id);
-
         // Find
         Task<Post> FindPost(int id);
 
@@ -18,5 +15,8 @@ namespace CodeFellowGram.Models.Interfaces
 
         // Save
         Task SaveAsync(Post Post);
+
+        // Delete
+        Task DeleteAsync(int id);
     }
 }

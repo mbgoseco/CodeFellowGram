@@ -15,7 +15,7 @@ namespace CodeFellowGram.Models.Utilities
 
         public Blob(IConfiguration configuration)
         {
-            CloudStorageAccount = CloudStorageAccount.Parse(configuration["BlobConnectionString"]);
+            CloudStorageAccount = CloudStorageAccount.Parse(configuration["ConnectionStrings:BlobConnectionString"]);
             CloudBlobClient = CloudStorageAccount.CreateCloudBlobClient();
         }
 

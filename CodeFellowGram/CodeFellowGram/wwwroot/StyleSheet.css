@@ -33,7 +33,7 @@ header {
     font-size: 4rem;
 }
 
-.post, #edit-box {
+.post, #edit-box, #comment-box {
     background-color: white;
     width: 35vw;
     border-radius: 10px;
@@ -114,4 +114,10 @@ h2 {
 
 textarea {
     resize: none;
+}
+
+.submitter {
+    background-color: antiquewhite;
+    font-family: 'Kalam';
+    font-size: 1.15rem;
 }

@@ -6,12 +6,13 @@
     Layout = "_Layout";
 }
 <div id="comment-box">
-    <form method="post">
+    <form class="manager" method="post">
         <label asp-for="Comment.User"></label>
         <input asp-for="Comment.User" />
-
+        <br />
         <label asp-for="Comment.UserComment">Comment</label>
         <textarea rows="5" asp-for="Comment.UserComment"></textarea>
-        <button type="submit">POST COMMENT</button>
+        <br />
+        <button class="submitter" type="submit">POST COMMENT</button>
     </form>
 </div>

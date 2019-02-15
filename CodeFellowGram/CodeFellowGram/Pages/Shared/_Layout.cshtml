@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/reset.css" />
+    <link rel="stylesheet" href="~/StyleSheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Hind+Vadodara|Kalam|Patrick+Hand" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="/logo.png" />
+        <a asp-page="/Index"><h1 id="title">CodeFellowGram</h1></a>
+        <img class="logo" src="/logo.png" />
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
+

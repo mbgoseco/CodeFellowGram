@@ -2,26 +2,25 @@
 @using CodeFellowGram.Models.Interfaces
 @inject IPost PostManager
 
-@{ 
+@{
+    ViewData["Title"] = "CodeFellowGram";
+
+    Layout = "_Layout";
+}
+
+@{
     var posts = await PostManager.GetPosts();
 }
 
-<head>
-    <title>CodeFellowsGram</title>
-    <link rel="stylesheet" href="~/reset.css" />
-    <link rel="stylesheet" href="~/StyleSheet.css" />
-    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Hind+Vadodara|Kalam|Patrick+Hand" rel="stylesheet">
-</head>
-<header>
-    <a asp-page="/Index"><h1 id="title">CodeFellowGram</h1></a>
-</header>
 
-<h3><a asp-page="/PostDetails/Manage">NEW POST</a></h3>
+<h3><a class="newPostLink" asp-page="/PostDetails/Manage">NEW POST</a></h3>
 @foreach (var post in posts)
 {
-    <h2>@post.Author</h2>
-    <a asp-page="/PostDetails/Index" asp-route-id="@post.ID">
-        <img src="@post.ImageURL" alt="post image" />
-    </a>
+    <div class="post">
+        <h2>@post.Author</h2>
+        <a asp-page="/PostDetails/Index" asp-route-id="@post.ID">
+            <img class="postImg" src="@post.ImageURL" alt="post image" />
+        </a>
+    </div>
 }
-<h3><a asp-page="/PostDetails/Manage">NEW POST</a></h3>
+<h3><a class="newPostLink" asp-page="/PostDetails/Manage">NEW POST</a></h3>

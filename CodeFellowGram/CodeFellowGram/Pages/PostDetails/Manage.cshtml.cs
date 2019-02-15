@@ -46,7 +46,7 @@ namespace CodeFellowGram.Pages.PostDetails
 
             if (Image != null)
             {
-                // Blob stuff goes here
+                // Here be blob stuff
                 var filePath = Path.GetTempFileName();
 
                 using (var stream = new FileStream(filePath, FileMode.Create))

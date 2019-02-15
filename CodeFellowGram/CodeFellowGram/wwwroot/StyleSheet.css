@@ -1,7 +1,123 @@
 ﻿body {
-    background-color: sienna;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: -webkit-center;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-image: linear-gradient(white, #3a3a3a);
+}
+
+.logo {
+    height: 10vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+#title {
+    font-family: 'Bowlby One SC', cursive;
+    color: black;
+    font-size: 4rem;
+}
+
+.post, #edit-box, #comment-box {
+    background-color: white;
+    width: 35vw;
+    border-radius: 10px;
+    margin: 5vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+
+.newPostLink, #edit, #comment, #go-home {
+    background-color: antiquewhite;
+    border-radius: 15px;
+    display: inline-block;
+    font-family: 'Kalam';
+    font-size: 1.25rem;
+    color: #00055d;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+    padding: 1vh;
+    font-weight: bold;
+    transition: linear 0.15s;
+}
+
+.newPost:hover, #edit:hover, #comment:hover, #go-home:hover {
+    background-color: #00055d;
+    color: antiquewhite;
+}
+
+h2 {
+    font-family: 'Kalam';
+    font-size: 1.75rem;
+    margin-bottom: 1vh;
+}
+
+.postImg {
+    width: 30vw;
+    height: 30vw;
+    transition: linear 0.15s;
+}
+
+.postImg:hover {
+    box-shadow: chocolate 0px 0px 20px 0px;
+}
+
+.detailImg {
+    width: 30vw;
+    height: 30vw;
+}
+
+.postDetails {
+    margin: 1vh 2.5vw 1vh 2.5vw;
+}
+
+#caption {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.15rem;
+    text-align: left;
+}
+
+.commentAuthor, .comment {
+    font-family: 'Patrick Hand', cursive;
+    text-align: left;
+    font-size: 1.10rem;
 }
 
 .commentAuthor {
     font-weight: bold;
+}
+
+.manager {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin: 2vw;
+    font-family: 'Kalam';
+    font-size: 1.25rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.submitter {
+    background-color: antiquewhite;
+    font-family: 'Kalam';
+    font-size: 1.15rem;
 }

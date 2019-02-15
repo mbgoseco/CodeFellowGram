@@ -1,10 +1,12 @@
 ﻿@page "{id}"
 @model CodeFellowGram.Pages.PostDetails.IndexModel
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Details";
+
+    Layout = "_Layout";
 }
 
-@{ 
+@{
     var comments = Model.Post.Comments.ToList();
 }
 <head>
@@ -12,16 +14,20 @@
     <link rel="stylesheet" href="~/StyleSheet.css" />
 </head>
 
-<div>
-    <p id="author">@Model.Post.Author</p>
-    <img src="@Model.Post.ImageURL" alt="image" />
-    <p id="caption">@Model.Post.Caption</p>
-    @foreach (var comment in comments)
-    {
-        <p class="comment"><span class="commentAuthor">@comment.User</span> @comment.UserComment</p>
-    }
-    <a id="edit" asp-page="/PostDetails/Manage" asp-route-id="@Model.Post.ID">EDIT</a>
-    <a id="comment" asp-page="/PostDetails/AddComment" asp-route-id="@Model.Post.ID">ADD COMMENT</a>
-    <a id="go-home" asp-page="/Index">HOME</a>
+<div class="post">
+    <h2 id="author">@Model.Post.Author</h2>
+    <img class="detailImg" src="@Model.Post.ImageURL" alt="image" />
+    <div class="postDetails">
+        <p id="caption">@Model.Post.Caption</p>
+        <hr />
+        @foreach (var comment in comments)
+        {
+            <p class="comment"><span class="commentAuthor">@comment.User</span>: @comment.UserComment</p>
+        }
+    </div>
 </div>
+
+<a id="edit" asp-page="/PostDetails/Manage" asp-route-id="@Model.Post.ID">EDIT</a>
+<a id="comment" asp-page="/PostDetails/AddComment" asp-route-id="@Model.Post.ID">ADD COMMENT</a>
+<a id="go-home" asp-page="/Index">HOME</a>
 

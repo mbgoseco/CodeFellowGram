@@ -1,23 +1,26 @@
 ﻿@page "{id?}"
 @model CodeFellowGram.Pages.PostDetails.ManageModel
 @{
-    ViewData["Title"] = "Manage";
+    ViewData["Title"] = "Manage Post";
+
+    Layout = "_Layout";
 }
 
-<div id="edit-box">
-    <form method="post">
+<div id="edit-box" >
+    <form class="manager" method="post" enctype="multipart/form-data">
         <input type="hidden" asp-for="Post.ID" />
 
         <label asp-for="Post.Author"></label>
         <input asp-for="Post.Author" />
-
-        <label asp-for="Post.ImageURL">Image URL</label>
-        <input asp-for="Post.ImageURL" />
-
+        <br />
+        <label asp-for="Image">Upload Image</label>
+        <input asp-for="Image" typeof="file" />
+        <br />
         <label asp-for="Post.Caption"></label>
         <textarea rows="5" asp-for="Post.Caption"></textarea>
-
-        <button type="submit">SAVE</button>
-        <button type="submit" asp-page-handler="Delete">DELETE</button>
+        <br />
+        <button class="submitter" type="submit">SAVE</button>
+        <br />
+        <button class="submitter" type="submit" asp-page-handler="Delete">DELETE</button>
     </form>
 </div>

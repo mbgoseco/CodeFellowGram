@@ -5,14 +5,14 @@
 }
 
 <div id="edit-box">
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <input type="hidden" asp-for="Post.ID" />
 
         <label asp-for="Post.Author"></label>
         <input asp-for="Post.Author" />
 
-        <label asp-for="Post.ImageURL">Image URL</label>
-        <input asp-for="Post.ImageURL" />
+        <label asp-for="Image">Upload Image</label>
+        <input asp-for="Image" typeof="file" />
 
         <label asp-for="Post.Caption"></label>
         <textarea rows="5" asp-for="Post.Caption"></textarea>

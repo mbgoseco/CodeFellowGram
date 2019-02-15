@@ -31,7 +31,7 @@ namespace CodeFellowGram
         {
             services.AddMvc();
 
-            services.AddDbContext<PostDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<PostDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
 
             services.AddScoped<IPost, PostManager>();
             services.AddScoped<IComment, CommentManager>();

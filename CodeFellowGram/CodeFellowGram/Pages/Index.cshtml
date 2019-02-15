@@ -6,6 +6,16 @@
     var posts = await PostManager.GetPosts();
 }
 
+<head>
+    <title>CodeFellowsGram</title>
+    <link rel="stylesheet" href="~/reset.css" />
+    <link rel="stylesheet" href="~/StyleSheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Hind+Vadodara|Kalam|Patrick+Hand" rel="stylesheet">
+</head>
+<header>
+    <a asp-page="/Index"><h1 id="title">CodeFellowGram</h1></a>
+</header>
+
 <h3><a asp-page="/PostDetails/Manage">NEW POST</a></h3>
 @foreach (var post in posts)
 {

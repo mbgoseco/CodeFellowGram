@@ -56,7 +56,7 @@ header {
     transition: linear 0.15s;
 }
 
-.newPost:hover, #edit:hover, #comment:hover, #go-home:hover {
+.newPostLink:hover, #edit:hover, #comment:hover, #go-home:hover {
     background-color: #00055d;
     color: antiquewhite;
 }

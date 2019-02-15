@@ -33,7 +33,7 @@ header {
     font-size: 4rem;
 }
 
-.post {
+.post, #edit-box {
     background-color: white;
     width: 35vw;
     border-radius: 10px;
@@ -100,4 +100,18 @@ h2 {
 
 .commentAuthor {
     font-weight: bold;
+}
+
+.manager {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin: 2vw;
+    font-family: 'Kalam';
+    font-size: 1.25rem;
+}
+
+textarea {
+    resize: none;
 }

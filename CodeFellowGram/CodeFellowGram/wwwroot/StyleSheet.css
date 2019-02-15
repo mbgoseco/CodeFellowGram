@@ -15,7 +15,7 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: auto;
     padding-top: 2vh;
     padding-bottom: 2vh;
     background-image: linear-gradient(white, #3a3a3a);

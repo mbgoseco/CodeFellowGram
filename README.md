@@ -20,6 +20,18 @@ Deleting a post
 Commenting on a post
 * When selecting a post to view its details, click the button labeled "ADD COMMENT". You will be directed to a page with fields to enter your username and the message you would like to add to the post. When finished, click "SAVE" and you will be directed to the details page of that post where you can view your new comment. 
 
+## Screenshots
+**Front Page**
+![front page](https://github.com/mbgoseco/CodeFellowGram/blob/master/Assets/FrontPage.PNG)
+
+**Post Details**
+![details](https://github.com/mbgoseco/CodeFellowGram/blob/master/Assets/Details.PNG)
+
+**Adding or Editing a Post**
+![add or edit post](https://github.com/mbgoseco/CodeFellowGram/blob/master/Assets/AddOrEdit.PNG)
+
+**Adding a Comment to a Post**
+![adding comment](https://github.com/mbgoseco/CodeFellowGram/blob/master/Assets/Comment.PNG)
 
 ## Schema
 ![Database Schema](https://github.com/mbgoseco/CodeFellowGram/blob/master/Assets/CodeFellowGram.png)

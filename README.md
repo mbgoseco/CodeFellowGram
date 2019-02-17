@@ -47,3 +47,6 @@ Commenting on a post
 * PostID - Foreign Key - A key value that associates a generated comment to its designated post
 * User - Name of user creating the comment
 * UserComment - Text field where the user makes their comment for the post
+
+## Technologies Used
+ASP.NET Core, Razor Pages, SQL Databases, Azure web app deployment, Azure blob storage

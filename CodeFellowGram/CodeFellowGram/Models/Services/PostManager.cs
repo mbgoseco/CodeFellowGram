@@ -62,7 +62,7 @@ namespace CodeFellowGram.Models.Services
         }
 
         /// <summary>
-        /// Finds a selected Post in the database and removes it if found.
+        /// Finds a selected Post in the database and removes it if found, and removes any related comments as well.
         /// </summary>
         /// <param name="id">Primary Key value</param>
         /// <returns>View of posts minus the deleted one</returns>

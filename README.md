@@ -23,6 +23,7 @@ Commenting on a post
 
 ## Schema
 ![Database Schema](https://github.com/mbgoseco/CodeFellowGram/blob/master/Assets/CodeFellowGram.png)
+
 **Post**
 * ID - Primary Key
 * Author - Username of person creating the post
